@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next";
+/*import { NextApiRequest, NextApiResponse } from "next";
 import NextAuth from "next-auth";
 import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
@@ -51,4 +51,4 @@ const authOptions: NextAuthOptions = {
 
 export default function route(req: NextApiRequest, res: NextApiResponse) {
   return NextAuth(req, res, authOptions);
-}
+}*/
