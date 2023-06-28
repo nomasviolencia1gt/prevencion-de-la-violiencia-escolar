@@ -19,6 +19,17 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const kinalEmail = json.email.split("@")[1];
+    if (kinalEmail !== "kinal.edu.gt" && kinalEmail !== "kinal.org.gt") {
+      return new NextResponse(
+        JSON.stringify({ message: "Invalid email, only kinal email can be accepted" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+    }
+
     if (json.password.length < 6) {
       return new NextResponse(
         JSON.stringify({
